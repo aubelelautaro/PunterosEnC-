@@ -8,13 +8,15 @@ int main()
     int numero;
     int numeroDos;
     numero=66;
-    numeroDos=&numero; // asignacion de memoria
     punteroNumero=&numero; // si esto no esta, el puntero no tiene valor
+
+    numeroDos=&numero; // asignacion de memoria
     printf("a -%d\n",numeroDos);
     //*punteroNumero=&numero; NO!
     //*punteroNumero = 55;      NO!
     numeroDos=*punteroNumero; // asignacion de valor
     printf("b - %d\n",numeroDos);
+
     printf("c -%d\n",numero);
 
     printf("d -%d\n",&numero); //direccion de memoria del numero
