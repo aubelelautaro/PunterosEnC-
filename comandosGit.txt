@@ -1,0 +1,12 @@
+git clone linkrepositorio.git
+
+cd al directorio del repositorio (Accede al repositorio) Ej:
+cd PunterosEnC-
+
+git status
+// Si hay un archivo en rojo
+git add .
+git commit -m "Mensaje de por que se guarda"
+.....
+
+git push origin master -f
