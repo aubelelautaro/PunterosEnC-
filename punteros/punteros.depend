@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1526645663 source:d:\##ppl estacionamiento\punterosenc-\punteros\main.c
+	<stdio.h>
+	<stdlib.h>
+
