@@ -32,5 +32,38 @@ int main(int argc, char **argv)
 
     fclose(fp);
 
+    /*      REPASO CLASE 2 DE ARCHIVOS
+    --------------------------------------------
+
+        FILE* pArchivo;
+    char cadena[50]="HOLA";
+
+    pArchivo = fopen("archivo.txt","w");//"W" PARA ESCRIBIR
+
+    if(pArchivo!=NULL)
+    {
+        fprintf(pArchivo,"%s %d",cadena,156); //GUARDA SIEMPRE STRING, NO HAY QUE PASARLE OTRO DATO O HACERLO CON MASCARA
+        fclose(pArchivo);
+        printf("Guardado\n");
+    }else
+    {
+        printf("No se pudo guardar");
+    }
+
+    pArchivo = fopen("archivo.txt","r");//"R" PARA LEER
+
+    if(pArchivo!=NULL)
+    {
+        while(!feof(pArchivo)) //find end of file
+        {
+            fgets(cadena,50,pArchivo);
+            puts(cadena);
+        }
+        fclose(pArchivo);
+    }
+
+    */
+
+
     return 0;
 }
