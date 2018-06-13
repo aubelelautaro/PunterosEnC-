@@ -79,9 +79,9 @@ int al_add(ArrayList* this, void* pElement)
     //pasar a resizeup
     if(this != NULL && pElement != NULL)
     {
-        if(this->size == this->reservedSize)
+        if(this->size == this->reservedSize) //se llega al limite del array
         {
-            aux = (void**) realloc(this->pElements, sizeof(void*)*(this->reservedSize + AL_INCREMENT));
+            aux = (void**) realloc(this->pElements, sizeof(void*)*(this->reservedSize + AL_INCREMENT)); // se aumenta el espacio en memoria
             if(aux!=NULL)
             {
                 flag =1;
@@ -96,7 +96,7 @@ int al_add(ArrayList* this, void* pElement)
 
         if (flag == 1)
         {
-            this->pElements[this->size] = pElement;
+            this->pElements[this->size] = pElement; // se agrega el elemento
             this->size++;
         }
 
