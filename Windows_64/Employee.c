@@ -25,31 +25,38 @@ void employee_print(Employee* this)
 
 Employee* employee_new(void)
 {
-
-    Employee* returnAux = NULL;
+    Employee* returnAux = (Employee*)malloc(sizeof(Employee));
 
     return returnAux;
-
 }
 
 void employee_delete(Employee* this)
 {
-
-
+    free(this);
 }
 
 int employee_setId(Employee* this, int id)
 {
+    int retorno = -1;
 
-    return 0;
-
+    if(this!=NULL && id >0)
+    {
+        retorno = 1;
+        this->id = id;
+    }
+    return retorno;
 }
 
 int employee_getId(Employee* this)
 {
+    int retorno = -1;
 
-    return 0;
+    if(this != NULL)
+    {
+        retorno = this->id;
+    }
 
+    return retorno;
 }
 
 

@@ -69,3 +69,20 @@
 	"ArrayList.h"
 	"Employee.h"
 
+1528918230 source:c:\users\usuario\downloads\punterosenc--master\windows_64\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1528918230 c:\users\usuario\downloads\punterosenc--master\windows_64\arraylist.h
+
+1528918230 c:\users\usuario\downloads\punterosenc--master\windows_64\employee.h
+
+1528918230 source:c:\users\usuario\downloads\punterosenc--master\windows_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Employee.h"
+

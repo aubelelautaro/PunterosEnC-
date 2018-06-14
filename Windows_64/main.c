@@ -19,12 +19,18 @@ int main()
 {
     int intAux;
     int i;
+
     ArrayList* lista;
-    lista = al_newArrayList(); //se le pide memoria al sistema operativo (malloc)
     Employee* eEmpleado;
     Employee* eEmpleado2;
     Employee* eEmpleadoAux;
 
+    lista = al_newArrayList(); //se le pide memoria al sistema operativo (malloc)
+
+    //PARSEA EL ARCHIVO
+    parserEmployee(fp, lista);
+
+    /*
     eEmpleado = (Employee*)malloc(sizeof(Employee)); // cargar valores para empleado
     eEmpleado -> id = 4;
     strcpy(eEmpleado->name,"ZZJuan");
@@ -45,9 +51,10 @@ int main()
 
     al_add(lista, eEmpleado2);
 
+    */
+
     intAux = al_len(lista);
     printf("cantidad de elementos: %d\n", intAux);
-
 
     for(i=0;i<intAux;i++)
     {
@@ -60,6 +67,15 @@ int main()
     for(i=0;i<intAux;i++)
     {
         eEmpleadoAux = (Employee*)al_get(lista,i); //i para arrancar en cada posicion
+        employee_print(eEmpleadoAux);
+    }
+
+    intAux=al_len(lista);
+    printf("cantidad de elementos despues de eliminar: %d\n",intAux);
+
+    for(i=0;i<intAux;i++)
+    {
+        eEmpleadoAux=(Employee*)al_get(lista, i); //Casteo para guardarlo como tipo de Employee*, uso el getter que me trae la posicion i de la lista
         employee_print(eEmpleadoAux);
     }
 
